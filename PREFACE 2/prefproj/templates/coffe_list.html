@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+
+      {%block body_block%}
+         <h1>Coffee Information Dash Board</h1><hr>
+         <table border='2'>
+           <thead>
+             <th>Coffee Name</th>
+             <th>Details</th>
+             <th>Update</th>
+             <th>Delete</th>
+           </thead>
+           {%for  cof in coffe_list %}
+           <tr>
+             <td>{{cof.name|title}}</td>
+             <td> <a href="/{{cof.id}}">Details</a> </td>
+             <td><a href="/update/{{cof.id}}">Update</a></td>
+             <td><a href="/delete/{{cof.id}}">Delete</a></td>
+           </tr>
+           {%endfor%}
+         </table><br><br><br>
+         <a href="/create" class='btn btn-primary btn-lg'>Do You Want to Insert New Coffee</a>
+      {%endblock%}

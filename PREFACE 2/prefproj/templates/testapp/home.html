@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load staticfiles%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{%static "css/abc.css" %}">
+    <script type="text/javascript" src="{%static "js/xyzq.js" %}"></script>
+</head>
+<body>
+<div class="col-md-6 mail_right">
+				<form action="home.html" method="post">
+					<input type="text" name="Name" value="Name" required="">
+					<input type="email" name="Email" value="Email" required="">
+					<input type="text" name="Mobile number" value="Mobile number" required="">
+					<textarea name="Message..."  required="">Message...</textarea>
+					<input type="submit" value="Send">
+
+				</form>
+			</div>
+</body>
+</html>
